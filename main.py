@@ -6,6 +6,5 @@ from storage_csv import StorageCsv
 if __name__ == "__main__":
     # storage = StorageCsv('movies.csv')
     # storage = StorageJson('movies.json')
-    storage = StorageJson('cats.json')
     movie_app = MovieApp(storage)
     movie_app.run()

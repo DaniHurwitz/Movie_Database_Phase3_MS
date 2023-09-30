@@ -182,12 +182,11 @@ class MovieApp:
         '''
         output = serialize_movie_data.serialize_movie(self.movies)
 
-        # File path to 'index_template.html' file in the '_static' folder for CODIO: ---------------------- in static folder
-        ### template_file_path = os.path.join(os.path.dirname(__file__), '_static', 'index_template.html')
+        # File path to 'index_template.html' file in the '_static' folder for CODIO:
+        template_file_path = os.path.join(os.path.dirname(__file__), '_static', 'index_template.html')
 
         # Replace place-holders on the HTML template file with serialized movie output from JSON file
-        ### with open(template_file_path, "r") as movie_file: -------------------------------------------use for CODIO
-        with open("index_template.html", "r") as movie_file:  # delete for codio
+        with open(template_file_path, "r") as movie_file:
             data = movie_file.read()
             data = data.replace("__TEMPLATE_MOVIE_GRID__", output)
             data = data.replace("__TEMPLATE_TITLE__", MY_WEBSITE_TITLE)

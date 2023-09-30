@@ -79,7 +79,3 @@ class StorageJson(IStorage):
         '''
         with open(self.file_path, "w") as file:
             json.dump(self.movies, file, indent=4)
-
-
-tester = StorageJson('films.json')
-tester.list_movies()
